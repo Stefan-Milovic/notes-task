@@ -1,0 +1,69 @@
+.notes-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.notes-card-wrapper {
+  box-sizing: border-box;
+  overflow: hidden;
+  max-height: 300px;
+  border-radius: 5px;
+  padding: 16px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.notes-card-wrapper:hover {
+  transform: scale(1.05);
+}
+.card-title {
+  font-size: 19px;
+  line-height: 19px;
+}
+.card-content {
+  font-size: 16px;
+  margin: 16px 0;
+
+  font-style: italic;
+  color: #808080;
+  max-height: calc(96px * 2);
+  overflow: hidden;
+  line-height: 19px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+}
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.card-options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  width: 100%;
+}
+.action-item {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.action-item:hover {
+  opacity: 1;
+}
+.edit {
+  color: blue;
+  font-weight: 600;
+}
+.delete {
+  font-weight: 600;
+  color: red;
+}
+@media (max-width: 768px) {
+  .notes-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
