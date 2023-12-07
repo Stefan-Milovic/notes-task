@@ -7,7 +7,7 @@
   height: 100%;
 }
 .app .container {
-  max-width: 100%; /*njemu je 1368 px ako dodje do diffa*/
+  max-width: 100%;
   width: 100%;
   padding: 0 16px;
 }

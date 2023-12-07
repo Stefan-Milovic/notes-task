@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 999;
   backdrop-filter: blur(5px);
 }
 .note-wrapper {
@@ -51,29 +51,19 @@
   align-items: center;
   justify-content: flex-end;
 }
-.note-actions button {
-  padding: 8px 24px;
-  font-weight: 600;
-  border: none;
-  margin-left: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.note-actions button.cancle-button {
+.note-actions .cancel-button {
   background-color: #c70000;
   color: #fff;
 }
-.note-actions button.cancle-button:hover {
-  transform: scale(1.05);
-}
-.note-actions button.create-button {
+.note-actions .create-button {
   background-color: #00ab66;
   color: #fff;
 }
-.note-actions button.create-button:hover {
+.note-actions .cancel-button:hover,
+.note-actions .create-button:hover {
   transform: scale(1.05);
 }
+
 @media (max-width: 768px) {
   .note-wrapper {
     width: 60%;

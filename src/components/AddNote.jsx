@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../assets/css/add-note.css";
+import Button from "./Button";
 
 function AddNote({ setOpen, note, createNotes, updateNotes, isEditing }) {
   const [title, setTitle] = useState(note ? note.title : "");
@@ -64,12 +65,20 @@ function AddNote({ setOpen, note, createNotes, updateNotes, isEditing }) {
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
           <div className="note-actions">
-            <button className="cancel-button" onClick={handleCancel}>
+            <Button
+              className="cancel-button"
+              onClick={handleCancel}
+              modalButton
+            >
               Cancel
-            </button>
-            <button className="create-button" onClick={handleSubmit}>
+            </Button>
+            <Button
+              className="create-button"
+              onClick={handleSubmit}
+              modalButton
+            >
               {isEditing ? "Edit" : "Create"}
-            </button>
+            </Button>
           </div>
         </form>
       </div>

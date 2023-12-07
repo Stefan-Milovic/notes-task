@@ -1,6 +1,6 @@
-import React from "react";
 import DeleteConfirmationModal from "./DeleteConfirmationModal";
 import "../assets/css/card.css";
+import Button from "./Button";
 
 function NotesCard({
   notes,
@@ -21,18 +21,20 @@ function NotesCard({
           </div>
           <div className="card-footer">
             <div className="card-options">
-              <div
+              <Button
                 className="action-item edit"
                 onClick={() => setEditNote(note)}
+                noBorder
               >
                 Edit 📝
-              </div>
-              <div
+              </Button>
+              <Button
                 className="action-item delete"
                 onClick={() => handleDeleteClick(note)}
+                noBorder
               >
                 Delete 🗑️
-              </div>
+              </Button>
             </div>
           </div>
         </div>

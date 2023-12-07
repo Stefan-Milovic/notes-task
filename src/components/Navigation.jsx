@@ -1,4 +1,5 @@
 import "../assets/css/navigation.css";
+import Button from "./Button";
 
 function Navigation({ onAddNoteClick }) {
   return (
@@ -8,7 +9,9 @@ function Navigation({ onAddNoteClick }) {
         <p className="nav-message"> Follow your daily notes with us </p>
         <div className="nav-options">
           <div className="nav-icon">
-            <button onClick={() => onAddNoteClick(true)}>Add Note +</button>
+            <Button navButton onClick={() => onAddNoteClick(true)}>
+              Add Note +
+            </Button>
           </div>
         </div>
       </div>
